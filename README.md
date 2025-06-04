@@ -1,2 +1,11 @@
 # NEW
-i don't Know why i make it 
+
+Simple repository containing a Tkinter calculator example.
+
+## Usage
+
+Run the calculator with:
+
+```bash
+python3 calculator.py
+```
