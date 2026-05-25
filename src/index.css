@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-surface: #f1f5f9;
+    --color-elevated: #ffffff;
+    --color-primary: #3b82f6;
+    --color-primary-hover: #2563eb;
+    --color-on-surface: #1e293b;
+    --color-on-surface-muted: #64748b;
+    --color-border: #e2e8f0;
+    --color-accent: #8b5cf6;
+  }
+
+  .dark {
+    --color-surface: #0f172a;
+    --color-elevated: #1e293b;
+    --color-primary: #60a5fa;
+    --color-primary-hover: #3b82f6;
+    --color-on-surface: #f1f5f9;
+    --color-on-surface-muted: #94a3b8;
+    --color-border: #334155;
+    --color-accent: #a78bfa;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-surface text-on-surface font-sans antialiased;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  input[type='number']::-webkit-inner-spin-button,
+  input[type='number']::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  input[type='number'] {
+    -moz-appearance: textfield;
+  }
+}
+
+@layer components {
+  .calc-input {
+    @apply w-full px-4 py-3 rounded-xl border border-border bg-elevated text-on-surface
+           placeholder-on-surface-muted focus:outline-none focus:ring-2
+           focus:border-primary transition-all duration-200;
+    --tw-ring-color: rgba(59, 130, 246, 0.4);
+  }
+
+  .dark .calc-input {
+    --tw-ring-color: rgba(96, 165, 250, 0.4);
+  }
+
+  .calc-btn {
+    @apply px-6 py-3 rounded-xl font-semibold text-white bg-primary hover:bg-primary-hover
+           transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2;
+    --tw-ring-color: rgba(59, 130, 246, 0.5);
+  }
+
+  .result-card {
+    background: linear-gradient(135deg, rgba(59,130,246,0.08) 0%, rgba(139,92,246,0.08) 100%);
+    @apply border rounded-2xl p-6;
+    border-color: rgba(59,130,246,0.2);
+  }
+
+  .dark .result-card {
+    border-color: rgba(96,165,250,0.2);
+  }
+
+  .category-pill {
+    @apply inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-medium;
+  }
+}
+
+@layer utilities {
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-border) transparent;
+  }
+  .scrollbar-thin::-webkit-scrollbar { width: 6px; }
+  .scrollbar-thin::-webkit-scrollbar-track { background: transparent; }
+  .scrollbar-thin::-webkit-scrollbar-thumb { background: var(--color-border); border-radius: 3px; }
+}
