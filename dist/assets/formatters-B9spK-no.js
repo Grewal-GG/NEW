@@ -1,0 +1,1 @@
+const r=(n,t="USD")=>new Intl.NumberFormat("en-US",{style:"currency",currency:t,maximumFractionDigits:2}).format(n),a=n=>new Intl.DateTimeFormat("en-US",{year:"numeric",month:"long",day:"numeric"}).format(n instanceof Date?n:new Date(n)),o=(n,t=4)=>Math.round(n*10**t)/10**t;export{a,r as f,o as r};
