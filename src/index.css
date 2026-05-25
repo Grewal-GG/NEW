@@ -4,25 +4,25 @@
 
 @layer base {
   :root {
-    --color-surface: #f1f5f9;
-    --color-elevated: #ffffff;
-    --color-primary: #3b82f6;
-    --color-primary-hover: #2563eb;
-    --color-on-surface: #1e293b;
-    --color-on-surface-muted: #64748b;
-    --color-border: #e2e8f0;
-    --color-accent: #8b5cf6;
+    --color-surface: #fef5e4;
+    --color-elevated: #fffdf5;
+    --color-primary: #c2410c;
+    --color-primary-hover: #9a3412;
+    --color-on-surface: #1c0a00;
+    --color-on-surface-muted: #78584a;
+    --color-border: #e8c99a;
+    --color-accent: #b45309;
   }
 
   .dark {
-    --color-surface: #0f172a;
-    --color-elevated: #1e293b;
-    --color-primary: #60a5fa;
-    --color-primary-hover: #3b82f6;
-    --color-on-surface: #f1f5f9;
-    --color-on-surface-muted: #94a3b8;
-    --color-border: #334155;
-    --color-accent: #a78bfa;
+    --color-surface: #1a0e05;
+    --color-elevated: #2b1a0a;
+    --color-primary: #f59e0b;
+    --color-primary-hover: #fbbf24;
+    --color-on-surface: #fef3c7;
+    --color-on-surface-muted: #c4a97a;
+    --color-border: #3d2812;
+    --color-accent: #fb923c;
   }
 
   * {
@@ -59,17 +59,22 @@
   .calc-btn {
     @apply px-6 py-3 rounded-xl font-semibold text-white bg-primary hover:bg-primary-hover
            transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2;
-    --tw-ring-color: rgba(59, 130, 246, 0.5);
+    --tw-ring-color: rgba(194, 65, 12, 0.5);
+  }
+
+  .dark .calc-btn {
+    --tw-ring-color: rgba(245, 158, 11, 0.5);
   }
 
   .result-card {
-    background: linear-gradient(135deg, rgba(59,130,246,0.08) 0%, rgba(139,92,246,0.08) 100%);
+    background: linear-gradient(135deg, rgba(194,65,12,0.07) 0%, rgba(180,83,9,0.07) 100%);
     @apply border rounded-2xl p-6;
-    border-color: rgba(59,130,246,0.2);
+    border-color: rgba(194,65,12,0.25);
   }
 
   .dark .result-card {
-    border-color: rgba(96,165,250,0.2);
+    background: linear-gradient(135deg, rgba(245,158,11,0.08) 0%, rgba(251,146,60,0.08) 100%);
+    border-color: rgba(245,158,11,0.2);
   }
 
   .category-pill {
